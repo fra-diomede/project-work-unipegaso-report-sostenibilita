@@ -1,12 +1,16 @@
-/* Footer (come modificato in precedenza) */
+/* Footer */
 footer {
-    background-color: #E60000;
     color: white;
     padding: 20px 10px;
     text-align: center;
     box-sizing: border-box;
     font-size: 0.9em;
     width: 100%;
+    font-weight: bold;
+}
+
+h4 {
+    font-weight: bold;
 }
 
 .footer-container {
@@ -78,4 +82,8 @@ footer {
 
 .chi-siamo div {
     text-align: left;
+}
+
+.my-gradient-div {
+    background: linear-gradient(to right, #E40000, #BB5992) !important;
 }

@@ -15,11 +15,13 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5em;
+    font-weight: bold !important;
 }
 
 header p {
     margin: 10px 0 0;
     font-size: 1.2em;
+    font-weight: bold !important;
 }
 
 main {
@@ -74,18 +76,9 @@ button:disabled {
 }
 
 button:hover:not(:disabled) {
-    background-color: #B80000;
+    background-color:  #E60000;
 }
 
-footer {
-    background-color: #E60000;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
 
 /* Barra di navigazione */
 nav {
@@ -93,7 +86,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
-    /* Rosso Vodafone */
     padding: 10px 20px;
     position: fixed;
     top: 0;
@@ -128,118 +120,13 @@ nav .menu li a {
 
 nav .menu li a:hover {
     color: #ffff;
-    /* Giallo chiaro per effetto hover */
 }
 
-/* Compensazione per il contenuto principale (spazio per la navbar fissa) */
 header,
 main {
     margin-top: 70px;
 }
 
-/* Footer */
-footer {
-    background-color: #E60000;
-    color: white;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer {
-    background-color: #E60000;
-    /* Rosso Vodafone */
-    color: white;
-    padding: 10px 5px;
-    /* Ridotto il padding */
-    text-align: center;
-    box-sizing: border-box;
-    font-size: 0.9em;
-    /* Ridotto il font generale */
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 0;
-    /* Ridotto il padding */
-    gap: 10px;
-    /* Minore spazio tra le colonne */
-    flex-wrap: wrap;
-}
-
-.footer-column {
-    flex: 1;
-    min-width: 150px;
-    text-align: left;
-    margin: 0 5px;
-}
-
-.footer-column p,
-.footer-column a {
-    font-size: 0.8em;
-    line-height: 1.4;
-    color: white;
-    text-decoration: none;
-}
-
-.footer-column a:hover {
-    text-decoration: underline;
-}
-
-.footer-container {
-    max-width: 1200px;
-    max-height: 80px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.footer-social {
-    text-align: left;
-}
-
-
-.social-icons img:hover {
-    transform: scale(1.1);
-}
-
-.footer-columns {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.footer-column h4 {
-    font-size: 1em;
-    margin-bottom: 5px;
-    color: #ffffff;
-}
-
-.footer-column p {
-    margin: 5px 0;
-}
-
-.footer-bottom {
-    text-align: center;
-    font-size: 14px;
-    color: #666;
-    border-top: 1px solid #ffffff;
-    margin-top: 10px;
-    padding-top: 5px;
-}
-
-.chi-siamo div {
-    text-align: left;
+.my-gradient-div {
+    background: linear-gradient(to right, #E40000, #BB5992) !important;
 }
