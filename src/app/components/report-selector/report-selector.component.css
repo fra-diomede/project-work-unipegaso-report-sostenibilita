@@ -1,0 +1,49 @@
+/* Contenuto Principale */
+main {
+    padding: 30px 20px;
+}
+
+.reports {
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.reports h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.reports div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.reports select,
+.reports button {
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.reports button {
+    background-color: #E60000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.reports button:hover {
+    background-color: #CC0000;
+}
+
+.reports select {
+    flex-grow: 1;
+}
+
+.reports .download-button-wrapper {
+    display: flex;
+    align-items: center;
+}

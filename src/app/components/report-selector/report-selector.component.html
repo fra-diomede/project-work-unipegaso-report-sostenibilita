@@ -1,0 +1,11 @@
+<section class="reports">
+    <h2>Report disponibili</h2>
+    <div>   
+        <label for="yearSelector">Seleziona un periodo:</label>
+        <select [(ngModel)]="selectedYear">
+            <option value="" selected>Seleziona un periodo</option>
+            <option *ngFor="let year of availableYears" [value]="year" (ngModelChange)="setSelectedYear($event)">{{ year }}</option>
+        </select>
+        <button [disabled]="!selectedYear || selectedYear == ''"  (click)="downloadSelectedReport()">Scarica</button>
+    </div>
+</section>
