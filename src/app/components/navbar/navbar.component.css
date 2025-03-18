@@ -1,10 +1,8 @@
-/* Barra di navigazione */
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #ffffff;
-    /* Rosso Vodafone */
     padding: 10px 20px;
     position: fixed;
     top: 0;
@@ -15,7 +13,6 @@ nav {
 
 nav .logo img {
     height: 40px;
-    /* Dimensione del logo */
 }
 
 nav .menu {
@@ -39,5 +36,4 @@ nav .menu li a {
 
 nav .menu li a:hover {
     color: #ffff;
-    /* Giallo chiaro per effetto hover */
 }
