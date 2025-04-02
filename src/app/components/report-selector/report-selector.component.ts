@@ -1,18 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { FeedbackMessage } from '../feedback-message/feedback-message';
+import { FeedbackMessageFactory } from '../feedback-message/feedback-message-factory';
+import { FeedbackMessageComponent } from '../feedback-message/feedback-message.component';
+import { FeedbackMessageType } from '../feedback-message/feedback-message-type';
 
 
 @Component({
   selector: 'app-report-selector',
   templateUrl: './report-selector.component.html',
   styleUrls: ['./report-selector.component.css'],
-  imports: [CommonModule, FormsModule]
+  imports: [CommonModule, FormsModule, FeedbackMessageComponent]
 })
 export class ReportSelectorComponent implements OnInit {
   availableYears: string[] = [];
   selectedYear: string | null = "";
-  isDownloadDisabled: boolean = true;
+  isDownloadDisabled = true;
+  feedbackMessage: FeedbackMessage | undefined = undefined;
+  @Output() feedbackMessageEmitter = new EventEmitter<FeedbackMessage | undefined>();
 
   constructor() {
   }
@@ -40,8 +46,11 @@ export class ReportSelectorComponent implements OnInit {
       link.download = fileName;
       link.click();
       window.URL.revokeObjectURL(url);
+      this.feedbackMessage = undefined;
+      //this.feedbackMessageEmitter.emit(undefined);
     }).catch(err => {
-      console.error("Errore durante il download del report");
+      this.feedbackMessage = FeedbackMessageFactory.getFeedbackMessage(FeedbackMessageType.ERROR, 'Errore durante il download: Report non disponibile!')
+      //this.feedbackMessageEmitter.emit(FeedbackMessageFactory.getFeedbackMessageByError(err, 'Errore durante il download: Report non disponibile!'));
     });
   }
 

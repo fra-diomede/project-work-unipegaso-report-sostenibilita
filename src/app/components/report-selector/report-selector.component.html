@@ -1,3 +1,4 @@
+<app-feedback-message [feedbackMessage]="feedbackMessage"></app-feedback-message>
 <section class="reports">
     <h2>Report disponibili</h2>
     <div>   
@@ -5,6 +6,6 @@
             <option value="" selected>Seleziona un periodo</option>
             <option *ngFor="let year of availableYears" [value]="year" (ngModelChange)="setSelectedYear($event)">{{ year }}</option>
         </select>
-        <button [ngClass]="!selectedYear || selectedYear == '' ? 'button-disabled' : ''" [disabled]="!selectedYear || selectedYear == ''" (click)="downloadSelectedReport()">Scarica</button>
+        <button [ngClass]="!selectedYear || selectedYear == '' ? 'button-disabled' : ''" [disabled]="!selectedYear || selectedYear == ''" (click)="downloadSelectedReport()">Scarica</button>   
     </div>
 </section>
