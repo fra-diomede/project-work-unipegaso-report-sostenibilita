@@ -16,7 +16,21 @@
 }
 
 .child {
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    padding: 10px;
     background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    color: white;
+    border-radius: 5px;
+  }
+
+.close-btn {
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
   }

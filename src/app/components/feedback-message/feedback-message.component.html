@@ -2,10 +2,11 @@
     <div [class]="classStyle">
         <div class="child" role="alert" [id]="id" tabindex="0">
             <span class="icon"></span>
-            <span> {{feedbackMessage.testo}} </span>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Chiudi" (click)="close()">
+            <button type="button" class="close-btn" data-dismiss="alert" aria-label="Chiudi" (click)="close()">
                 <fa-icon [icon]="faXmark"></fa-icon>
             </button>
+            <span> {{feedbackMessage.testo}} </span>
+
         </div>
     </div>
 }
