@@ -2,7 +2,6 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ReportSelectorComponent } from './components/report-selector/report-selector.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { FeedbackMessageComponent } from "./components/feedback-message/feedback-message.component";
 import { FeedbackMessage } from './components/feedback-message/feedback-message';
 
 @Component({
@@ -10,7 +9,7 @@ import { FeedbackMessage } from './components/feedback-message/feedback-message'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   standalone: true,
-  imports: [NavbarComponent, ReportSelectorComponent, FooterComponent, FeedbackMessageComponent]
+  imports: [NavbarComponent, ReportSelectorComponent, FooterComponent]
 })
 export class AppComponent {
   feedbackMessage: FeedbackMessage | undefined; 
