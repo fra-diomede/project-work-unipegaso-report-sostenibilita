@@ -46,11 +46,9 @@ export class ReportSelectorComponent implements OnInit {
       link.download = fileName;
       link.click();
       window.URL.revokeObjectURL(url);
-      this.feedbackMessage = undefined;
-      //this.feedbackMessageEmitter.emit(undefined);
+      this.feedbackMessage = FeedbackMessageFactory.getFeedbackMessage(FeedbackMessageType.SUCCESS, 'Operazione conclusa con successo: Report scaricato!')
     }).catch(err => {
       this.feedbackMessage = FeedbackMessageFactory.getFeedbackMessage(FeedbackMessageType.ERROR, 'Errore durante il download: Report non disponibile!')
-      //this.feedbackMessageEmitter.emit(FeedbackMessageFactory.getFeedbackMessageByError(err, 'Errore durante il download: Report non disponibile!'));
     });
   }
 
